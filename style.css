@@ -4,6 +4,7 @@
   --primary-color: #ef9273;
   --secondary-color: #fef9f8;
   --dark-color: #0d0d0d;
+  --white-color: #ffff;
 }
 * {
   box-sizing: border-box;
@@ -20,6 +21,12 @@ body {
   background-color: var(--primary-color);
   margin-top: 10%;
 }
+.button {
+  background-color: rgba(70, 125, 243, 0.712);
+  color: #fef9f8;
+  padding: 5px;
+  border-radius: 10%;
+}
 a {
   text-decoration: none;
 }
@@ -33,12 +40,25 @@ mx-3 {
   margin-left: 6rem;
 }
 .card {
-  background-color: var(--secondary-color);
+  background-color: var(--white-color);
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  margin: 10px;
+  margin: 15px /* 80px */;
   color: #333;
+  height: 95%;
+  width: 70%;
+  justify-self: center;
+}
+.card a {
+  background-color: rgba(70, 125, 243, 0.712);
+  color: #fef9f8;
+  padding: 5px;
+  border-radius: 10%;
+  float: right;
+}
+.card a:hover {
+  background-color: rgba(51, 90, 175, 0.712);
 }
 /* h1,
 h2 {
@@ -51,8 +71,8 @@ p {
 } */
 img {
   width: 100%;
+  height: auto;
 }
-
 .main-body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -85,4 +105,19 @@ img {
 }
 .main-img img {
   border-radius: 2% 2% 2% 25%;
+}
+.template-page .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+.button-back {
+  margin: 2rem 0 3rem 6.2rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.button-back:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
 }
